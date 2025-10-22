@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About — AHM</title>
+  <meta name="description" content="About Mahi Abdullah — Data Analyst & Excel Specialist. UI/UX and front‑end design, graphics, and video editing." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body data-page="about">
+  <div class="bg fx-grid"></div>
+  <div class="bg fx-glow"></div>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="brand"><span class="logo">AHM</span><span class="brand-dot"></span></a>
+      <nav class="nav-main">
+        <button class="nav-toggle" aria-label="Toggle menu"><i class="ri-menu-4-line"></i></button>
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link" data-page="home">Home</a></li>
+          <li><a href="about.html" class="nav-link" data-page="about">About</a></li>
+          <li><a href="services.html" class="nav-link" data-page="services">Services</a></li>
+          <li><a href="contact.html" class="nav-link" data-page="contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-cta">
+        <button class="btn btn-gradient order-open" data-service="General Inquiry"><i class="ri-rocket-2-line"></i> Order Now</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container about-grid">
+        <div class="about-copy" data-animate>
+          <h1 class="section-title">About me</h1>
+          <p>
+            Hi, I’m Mahi Abdullah — a Data Analyst and Excel Specialist who also designs usable interfaces and fast websites.
+            I pair analytical thinking with clean visuals to ship work that’s accurate and easy to use.
+          </p>
+          <div class="badges">
+            <span class="badge">Excel / Sheets</span>
+            <span class="badge">Power Query</span>
+            <span class="badge">SQL (basic)</span>
+            <span class="badge">Figma</span>
+            <span class="badge">HTML/CSS/JS</span>
+            <span class="badge">Premiere / CapCut</span>
+          </div>
+        </div>
+        <div class="about-panels" data-animate>
+          <div class="panel">
+            <h3><i class="ri-sparkling-line"></i> What I deliver</h3>
+            <ul class="list">
+              <li>Clear insights and dashboards you can act on</li>
+              <li>Polished UI/UX with responsive layout</li>
+              <li>On‑time delivery and friendly communication</li>
+            </ul>
+          </div>
+          <div class="panel">
+            <h3><i class="ri-time-line"></i> Typical timelines</h3>
+            <ul class="list">
+              <li>Dashboards / Excel: 1–5 days</li>
+              <li>UI/UX screens: 2–5 days</li>
+              <li>Landing site: 3–7 days</li>
+              <li>Graphics / Video: 1–3 days</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container" data-animate>
+        <div class="panel">
+          <h3><i class="ri-hand-coin-line"></i> How we’ll work</h3>
+          <ul class="list">
+            <li>You share goals, examples, and files</li>
+            <li>I send a plan, timeline, and fixed quote</li>
+            <li>We iterate with clear milestones</li>
+          </ul>
+          <div style="margin-top:12px;">
+            <button class="btn btn-gradient order-open" data-service="General Inquiry"><i class="ri-rocket-2-line"></i> Start an order</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="foot-left"><span class="logo">Mahi Abdullah</span><span class="sep">•</span><span>Data • Design • Web</span></div>
+      <div class="foot-right"><a href="index.html">Home</a><a href="services.html">Services</a><a href="contact.html">Contact</a></div>
+    </div>
+  </footer>
+
+  <!-- Order Modal -->
+  <div id="order-modal" class="modal" aria-hidden="true">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="order-title">
+      <button class="modal-close" aria-label="Close" data-close><i class="ri-close-line"></i></button>
+      <h3 id="order-title">Start your order</h3>
+      <form id="order-form" class="form" data-endpoint="https://formspree.io/f/xqayvkjz">
+        <select name="service" id="order-service">
+          <option>General Inquiry</option><option>Data Analysis</option><option>Excel / Google Sheets</option>
+          <option>UI/UX Design</option><option>Front‑end Website</option><option>Graphic Design</option><option>Video Editing</option>
+        </select>
+        <div class="grid-2">
+          <input type="text" name="name" placeholder="Your name" required>
+          <input type="email" name="email" placeholder="Your email" required>
+        </div>
+        <input type="text" name="title" placeholder="Project title (optional)">
+        <textarea name="brief" rows="5" placeholder="Describe what you need..." required></textarea>
+        <div class="grid-2">
+          <select name="budget">
+            <option value="">Budget (USD)</option><option>Under $50</option><option>$50–$150</option><option>$150–$500</option><option>$500+</option>
+          </select>
+          <label for="deadline">Deadline (optional)</label>
+            <nbsb></nbsb><input type="date" id="deadline" name="deadline">
+        </div>
+        <input type="url" name="links" placeholder="Links to files or examples (optional)">
+        <input type="text" name="website" class="hp" aria-hidden="true" tabindex="-1" autocomplete="off">
+        <label class="agree"><input type="checkbox" required> I agree to be contacted about this order.</label>
+        <button class="btn btn-gradient" type="submit"><i class="ri-rocket-2-line"></i> Submit order</button>
+        <p class="form-status" role="status" aria-live="polite"></p>
+        <p class="hint">Prefer a marketplace? Order on
+          <a href="https://www.fiverr.com/s/pdebWZR" target="_blank" rel="noopener">Fiverr</a>,
+          <a href="https://www.upwork.com/freelancers/~01f1a3c50b1aa1e077" target="_blank" rel="noopener">Upwork</a>,
+          or <a href="https://www.freelancer.com/u/mahiabdullah2006" target="_blank" rel="noopener">Freelancer</a>.
+        </p>
+      </form>
+    </div>
+  </div>
+
+
+
+  <script src="index.js" defer></script>
+</body>
+</html>

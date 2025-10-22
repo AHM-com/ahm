@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — AHM</title>
+  <meta name="description" content="Contact Mahi Abdullah for data analysis, Excel automation, UI/UX & front‑end, graphic design, and video editing." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body data-page="contact">
+  <div class="bg fx-grid"></div>
+  <div class="bg fx-glow"></div>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="brand"><span class="logo">AHM</span><span class="brand-dot"></span></a>
+      <nav class="nav-main">
+        <button class="nav-toggle" aria-label="Toggle menu"><i class="ri-menu-4-line"></i></button>
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link" data-page="home">Home</a></li>
+          <li><a href="about.html" class="nav-link" data-page="about">About</a></li>
+          <li><a href="services.html" class="nav-link" data-page="services">Services</a></li>
+          <li><a href="contact.html" class="nav-link" data-page="contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-cta">
+        <button class="btn btn-gradient order-open" data-service="General Inquiry"><i class="ri-rocket-2-line"></i> Order Now</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h1 class="section-title" data-animate>Contact</h1>
+        <div class="contact-grid" data-animate>
+          <div class="contact-info">
+            <p>Tell me about your project. I’ll reply within 24 hours.</p>
+            <div class="contact-cards">
+              <div class="c-card">
+                <i class="ri-mail-line"></i>
+                <div>
+                  <strong>Email</strong>
+                 <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ahmdeeds.ma@gmail.com&su=Hello%20Mahi&body=I%20would%20like%20to%20discuss%20a%20project." target="_blank">
+                    ahmdeeds.ma@gmail.com
+                </a>
+
+                </div>
+              </div>
+              <div class="c-card">
+                <i class="ri-map-pin-line"></i>
+                <div>
+                  <strong>Time zone</strong>
+                  <span>GMT+6 Dhaka, Bangladesh</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <form id="contact-form" class="form" data-endpoint="https://formspree.io/f/xqayvkjz">
+            <input type="text" name="name" placeholder="Your name" required>
+            <input type="email" name="email" placeholder="Your email" required>
+            <input type="text" name="subject" placeholder="Subject" required>
+            <textarea name="message" rows="6" placeholder="Tell me about your project..." required></textarea>
+            <input type="text" name="website" class="hp" aria-hidden="true" tabindex="-1" autocomplete="off">
+            <button class="btn btn-gradient" type="submit"><i class="ri-send-plane-2-line"></i> Send message</button>
+            <p class="form-status" role="status" aria-live="polite"></p>
+            <p class="hint">
+            Prefer a marketplace?
+            <a class="market fiverr" href="https://www.fiverr.com/s/pdebWZR" target="_blank" rel="noopener"><span class="dot"></span> Fiverr</a>
+            <a class="market upwork" href="https://www.upwork.com/freelancers/~01f1a3c50b1aa1e077" target="_blank" rel="noopener"><span class="dot"></span> Upwork</a>
+            <a class="market freelancer" href="https://www.freelancer.com/u/mahiabdullah2006" target="_blank" rel="noopener"><span class="dot"></span> Freelancer</a>
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="foot-left"><span class="logo">Mahi Abdullah</span><span class="sep">•</span><span>Data • Design • Web</span></div>
+      <div class="foot-right"><a href="index.html">Home</a><a href="services.html">Services</a><a href="contact.html">Contact</a></div>
+    </div>
+  </footer>
+
+  <!-- Order Modal -->
+  <div id="order-modal" class="modal" aria-hidden="true">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="order-title">
+      <button class="modal-close" aria-label="Close" data-close><i class="ri-close-line"></i></button>
+      <h3 id="order-title">Start your order</h3>
+      <form id="order-form" class="form" data-endpoint="https://formspree.io/f/xqayvkjz">
+        <select name="service" id="order-service">
+          <option>General Inquiry</option><option>Data Analysis</option><option>Excel / Google Sheets</option>
+          <option>UI/UX Design</option><option>Front‑end Website</option><option>Graphic Design</option><option>Video Editing</option>
+        </select>
+        <div class="grid-2">
+          <input type="text" name="name" placeholder="Your name" required>
+          <input type="email" name="email" placeholder="Your email" required>
+        </div>
+        <input type="text" name="title" placeholder="Project title (optional)">
+        <textarea name="brief" rows="5" placeholder="Describe what you need..." required></textarea>
+        <div class="grid-2">
+          <select name="budget">
+            <option value="">Budget (USD)</option><option>Under $50</option><option>$50–$150</option><option>$150–$500</option><option>$500+</option>
+          </select>
+          <label for="deadline">Deadline (optional)</label>
+            <nbsb></nbsb><input type="date" id="deadline" name="deadline">
+
+        </div>
+        <input type="url" name="links" placeholder="Links to files or examples (optional)">
+        <input type="text" name="website" class="hp" aria-hidden="true" tabindex="-1" autocomplete="off">
+        <label class="agree"><input type="checkbox" required> I agree to be contacted about this order.</label>
+        <button class="btn btn-gradient" type="submit"><i class="ri-rocket-2-line"></i> Submit order</button>
+        <p class="form-status" role="status" aria-live="polite"></p>
+        <p class="hint">Prefer a marketplace? Order on
+          <a href="https://www.fiverr.com/s/pdebWZR" target="_blank" rel="noopener">Fiverr</a>,
+          <a href="https://www.upwork.com/freelancers/~01f1a3c50b1aa1e077" target="_blank" rel="noopener">Upwork</a>,
+          or <a href="https://www.freelancer.com/u/mahiabdullah2006" target="_blank" rel="noopener">Freelancer</a>.
+        </p>
+      </form>
+    </div>
+  </div>
+
+
+  <script src="index.js" defer></script>
+</body>
+</html>
