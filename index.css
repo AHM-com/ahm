@@ -118,7 +118,11 @@ body {
     background: rgba(11,15,26,0.95); border: 1px solid var(--line); display: none;
   }
   .nav-links.open { display: flex; }
-  .nav-cta { display: none; }
+  .nav-cta {
+    display: inline-flex; /* make it visible on mobile */
+    justify-content: center; /* optional: center button */
+    margin-top: 10px;       /* optional spacing */
+  }
 }
 
 /* Hero */
@@ -394,4 +398,5 @@ select::-ms-expand { display: none; }
   .btn:hover, .card:hover, .work-card:hover { transform: none; }
   .chip { animation: none; }
   .orb-1, .orb-2, .orb-3 { animation: none; }
+
 }
